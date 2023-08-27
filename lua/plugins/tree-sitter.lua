@@ -1,8 +1,22 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   opts = function(_, opts)
-    if type(opts.ensure_installed) == "table" then
-      vim.list_extend(opts.ensure_installed, { "typescript", "tsx", "go", "gomod", "gowork", "gosum" })
-    end
+    local config = require("nvim-treesitter.configs")
+
+    config.setup({
+      sync_install = false,
+
+      auto_install = true,
+
+      ignore_install = {},
+
+      modules = {},
+
+      ensure_installed = { "typescript", "dart", "sql", "yaml", "tsx", "go", "gomod", "gowork", "gosum" },
+
+      context_commentstring = {
+        enable = true,
+      },
+    })
   end,
 }
