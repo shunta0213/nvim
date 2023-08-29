@@ -12,7 +12,18 @@ return {
 
       modules = {},
 
-      ensure_installed = { "typescript", "dart", "sql", "yaml", "tsx", "go", "gomod", "gowork", "gosum" },
+      ensure_installed = {
+        "typescript",
+        "dart",
+        "sql",
+        "yaml",
+        "tsx",
+        "go",
+        "gomod",
+        "gowork",
+        "gosum",
+        "prisma",
+      },
 
       context_commentstring = {
         enable = true,
