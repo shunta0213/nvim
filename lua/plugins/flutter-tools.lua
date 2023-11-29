@@ -8,7 +8,7 @@ return {
   keys = {
     { "<leader>fot", "<cmd>FlutterOutlineToggle<cr>", desc = "Toggle Flutter Outline" },
   },
-  config = function()
+  opts = function()
     require("flutter-tools").setup({
       fvm = true,
       decorations = {
